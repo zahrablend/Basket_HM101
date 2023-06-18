@@ -51,6 +51,7 @@ namespace Basket_HM101
                 Console.WriteLine($"{lineNum}. \"{item.Brand}\" {item.GetType().Name} ({item.Description}) - EUR {item.Price.ToString("0.00")} x {quantity}");
                 lineNum++;
             }
+            Console.WriteLine($"Total: EUR {cart.GetTotal():0.00}");
         }
     }
 }
