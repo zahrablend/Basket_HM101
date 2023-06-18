@@ -8,11 +8,34 @@
 
 namespace Basket_HM101
 {
-    internal class Program
+    internal static class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            // Create new cart
+            var cart = new Cart(1);
+
+            // Create products
+            var moisturizer = new Moisturizer(1, 15)
+            {
+                Brand = "Oriflame",
+                SkinType = SkinType.Mature,
+                Description = "Moisturizer for mature skin"
+            };
+
+            var conditioner = new Conditioner(2, 6)
+            {
+                Brand = "Olay",
+                HairType = HairType.Thin,
+                Description = "Conditioner for thin hair"
+            };
+
+            var bodyMilk = new BodyMilk(3, 7)
+            {
+                Brand = "Oriflame",
+                SkinType = SkinType.Normal,
+                Description = "Body milk for normal skin"
+            };
         }
     }
 }

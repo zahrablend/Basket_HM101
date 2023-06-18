@@ -13,6 +13,7 @@ namespace Basket_HM101
         public decimal Price { get; private set; }
         public int Volume { get; set; }
         public SkinType SkinType { get; set; }
+        public HairType HairType { get; set; }
         public string? Description { get; set; }
 
         protected Product(int id, decimal price)
