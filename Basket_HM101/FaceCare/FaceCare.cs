@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Basket_HM101
 {
-    public abstract class FaceCare : Product
+    public class FaceCare : Product
     {
-        protected FaceCare(int id, decimal price) : base(id, price) { }
+        public FaceCare(int id, decimal price) : base(id, price) { }
     }
 }

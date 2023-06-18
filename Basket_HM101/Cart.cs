@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -19,10 +20,10 @@ namespace Basket_HM101
 
         public void AddItem(Product item, int quantity = 1)
         {
-            var existingItem = _items.Find(i => i.Item.Id == item.Id);
-            if (existingItem.Item != null)
+            var itemIndex = _items.FindIndex(i => i.Item.Id == item.Id);
+            if (itemIndex != -1)
             {
-                existingItem.Quantity += quantity;
+                _items[itemIndex] = (_items[itemIndex].Item, _items[itemIndex].Quantity + quantity);
             }
             else
             {

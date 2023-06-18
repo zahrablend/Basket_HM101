@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Basket_HM101
 {
-    public abstract class Product
+    public class Product
     {
         public int Id { get; private set; }
         public string? Brand { get; set; }
@@ -16,7 +16,7 @@ namespace Basket_HM101
         public HairType HairType { get; set; }
         public string? Description { get; set; }
 
-        protected Product(int id, decimal price)
+        public Product(int id, decimal price)
         {
             Id = id;
             Price = price;
