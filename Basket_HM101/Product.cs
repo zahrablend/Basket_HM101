@@ -15,5 +15,10 @@ namespace Basket_HM101
         public SkinType SkinType { get; set; }
         public string? Description { get; set; }
 
+        protected Product(int id, decimal price)
+        {
+            Id = id;
+            Price = price;
+        }
     }
 }
